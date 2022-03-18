@@ -23,12 +23,12 @@ $(document).ready(function(){
 
 var API_KEY = config.API_KEY
 const MAX_HEIGHT = 200
-const NUM_OF_RESULTS = 1000
+const NUM_OF_RESULTS = 50
 const RATING = "g"
 
 
 function main(){
-  //document.getElementById("result").innerHTML = ""
+  document.getElementById("mainDiv").innerHTML = ""
   //get the value from the search field
   const term = document.getElementById("search").value
   //run the unsplash search with the search value
