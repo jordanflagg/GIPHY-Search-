@@ -35,8 +35,7 @@ function main(){
   fetch(`https://api.giphy.com/v1/gifs/search?api_key=${config.API_KEY}&q=${term}&limit=${NUM_OF_RESULTS}&offset=0&rating=${RATING}&lang=en`)
   .then(response => response.json())
   .then(data =>{
-    console.log(data)
-    //console.log(data.results[0].urls.regular)
+  
   //take response data and parse / break down values needed for display
 
    data.data.forEach(function(item){
@@ -45,9 +44,6 @@ function main(){
     
 
 document.getElementById("mainDiv").innerHTML += `<img id=”centerdImage” src='${item.images.original.url}'height=${MAX_HEIGHT}><\img>`
-				
-     
-     //document.getElementById("result").innerHTML += `<img src='${item.images.original.url}'height=${MAX_HEIGHT}><br>`
     
    })
 
